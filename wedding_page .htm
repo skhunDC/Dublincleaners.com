@@ -42,6 +42,13 @@
     .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 20px;border-radius:999px;background:var(--accent);color:#fff;font-weight:800;letter-spacing:.2px}
     .btn.alt{background:#ffffff;color:#111;border:1px solid rgba(0,0,0,.08)}
 
+    /* BANNER */
+    .cascade-banner{
+      background:#2c2c2c url('https://www.dublincleaners.com/wp-content/uploads/2025/08/Wedding_Venue.png') center/cover no-repeat;
+      background-position:center 0;
+      min-height:60vh;
+    }
+
     /* SECTION BASE */
     main{padding:56px 0 96px}
     section{padding:24px 0}
@@ -160,6 +167,7 @@
   </header>
 
   <main>
+    <section class="cascade-banner"></section>
     <div class="container">
 
       <!-- WHY DUBLIN -->
@@ -516,6 +524,15 @@
     function go(i){ idx = i; slidesEl.style.transform = `translateX(${-100*i}%)`; dots.forEach((d,di)=>d.classList.toggle('active',di===i)); }
     dots.forEach(btn=>btn.addEventListener('click',()=>go(+btn.dataset.i)));
     setInterval(()=>{ go((idx+1)%dots.length); }, 5200);
+
+    // Parallax scroll for banner
+    const banner = document.querySelector('.cascade-banner');
+    if(banner){
+      window.addEventListener('scroll',()=>{
+        const offset = window.scrollY * 0.4;
+        banner.style.backgroundPosition = `center ${offset}px`;
+      });
+    }
   </script>
 </body>
 </html>
