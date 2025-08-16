@@ -520,10 +520,23 @@
     // Parallax scroll for hero background
     const hero = document.querySelector('header.hero');
     if(hero){
-      window.addEventListener('scroll',()=>{
-        const offset = window.scrollY * 0.4;
-        hero.style.backgroundPosition = `center ${offset}px`;
+      const factor = 0.4; // smaller = slower parallax
+      let ticking = false;
+
+      function update(){
+        const offset = window.scrollY * factor;
+        hero.style.backgroundPosition = `center calc(50% + ${offset}px)`;
+        ticking = false;
+      }
+
+      window.addEventListener('scroll', () => {
+        if(!ticking){
+          requestAnimationFrame(update);
+          ticking = true;
+        }
       });
+
+      update(); // set initial position so there's no jump on first scroll
     }
   </script>
 </body>
