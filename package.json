@@ -1,0 +1,8 @@
+{
+  "name": "dublincleaners-test",
+  "version": "1.0.0",
+  "description": "Testing package.json",
+  "scripts": {
+    "test": "echo 'No tests specified'"
+  }
+}
