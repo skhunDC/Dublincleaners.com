@@ -2,7 +2,7 @@
 Revamp of Dublincleaners.com site
 
 1st of many updates:  
-Wedding Page Prototype: <a href="https://skhundc.github.io/Dublincleaners.com">Click here</a>
+Wedding Page Prototype: <a href="https://skhundc.github.io/Dublincleaners.com/Wedding.html">Click here</a>
 
 ## Mobile Friendliness
 
