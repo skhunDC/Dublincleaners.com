@@ -1,6 +1,7 @@
 # Dublincleaners.com
 Revamp of Dublincleaners.com site
-https://skhundc.github.io/Dublincleaners.com/Wedding.html
+
+1st of many updates:  https://skhundc.github.io/Dublincleaners.com/Wedding.html
 
 ## Mobile Friendliness
 
