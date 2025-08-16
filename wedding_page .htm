@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dublin Cleaners — Wedding & Couture Care</title>
+  <meta name="description" content="Hand-finished cleaning, pressing, and museum-grade preservation for gowns, veils, and formalwear. Concierge-level service from Central Ohio’s couture experts." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#ffffff;--ink:#141414;--muted:#60636b;--accent:#C8102E;--accent-ink:#fff;--gold:#b79a6b;--border:#ececec;--soft:#faf9f7;--maxw:1180px;
+      --radius:16px;--shadow:0 10px 30px rgba(0,0,0,.08);--shadow-sm:0 4px 12px rgba(0,0,0,.06);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;height:100%;scroll-behavior:smooth}
+    body{font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";color:var(--ink);background:var(--bg);line-height:1.65}
+    img{max-width:100%;display:block}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+
+    /* NAV */
+    .nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.72);backdrop-filter:saturate(180%) blur(10px);border-bottom:1px solid rgba(0,0,0,.06)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;height:66px}
+    .brand{display:flex;gap:12px;align-items:center}
+    .brand img{height:36px;width:auto}
+    .brand .wordmark{font-weight:700;letter-spacing:.2px}
+    .nav a.btn{display:inline-flex;align-items:center;gap:10px;padding:10px 16px;border-radius:999px;background:var(--accent);color:var(--accent-ink);font-weight:700;box-shadow:var(--shadow-sm)}
+    .nav a.btn svg{width:18px;height:18px}
+
+    /* HERO */
+    header.hero{position:relative;display:grid;min-height:76vh;align-items:end;color:#fff;background:url('images/hero_wedding.jpg') center/cover no-repeat}
+    header.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.25),rgba(0,0,0,.6))}
+    .hero-inner{position:relative;padding:88px 0 64px}
+    .eyebrow{display:inline-block;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(6px);font-weight:600;letter-spacing:.3px}
+    .hero h1{font-family:"Playfair Display",Georgia,serif;font-weight:600;font-size:clamp(36px,6vw,68px);line-height:1.08;margin:14px 0 10px}
+    .hero-sub{max-width:760px;font-size:clamp(16px,2vw,19px);opacity:.98;margin:0 0 20px}
+    .hero-tagline{text-align:center;margin:10px 0 18px;font-size:clamp(16px,2.2vw,20px);font-weight:600;opacity:.98}
+    .cta-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 20px;border-radius:999px;background:var(--accent);color:#fff;font-weight:800;letter-spacing:.2px}
+    .btn.alt{background:#ffffff;color:#111;border:1px solid rgba(0,0,0,.08)}
+
+    /* SECTION BASE */
+    main{padding:56px 0 96px}
+    section{padding:24px 0}
+    h2{font-family:"Playfair Display",Georgia,serif;font-size:clamp(26px,3.5vw,40px);line-height:1.2;margin:0 0 6px}
+    h3.subtitle{color:var(--gold);font-weight:700;margin:12px 0 8px;font-size:clamp(18px,2.4vw,22px)}
+    h4{margin:18px 0 8px;font-size:18px}
+    p{margin:8px 0}
+    .fine{color:var(--muted);font-size:14px}
+    .band{background:var(--soft);border:1px solid var(--border);border-radius:var(--radius);padding:20px}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .box{background:#fff;border:1px solid var(--border);border-radius:14px;padding:16px;box-shadow:var(--shadow-sm)}
+    .bullets{list-style:none;padding:0;margin:10px 0 0;columns:2;gap:24px}
+    .bullets li{margin:6px 0;padding-left:14px;position:relative}
+    .bullets li::before{content:"•";position:absolute;left:0;color:var(--gold)}
+
+    /* VALUE STRIP */
+    .values{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:-28px}
+    .pill{background:#fff;border:1px solid var(--border);border-radius:999px;padding:10px 14px;display:flex;align-items:center;gap:10px;box-shadow:var(--shadow-sm)}
+    .pill svg{width:18px;height:18px;color:var(--gold)}
+
+    /* GALLERY */
+    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+    .card{overflow:hidden;border-radius:14px;border:1px solid var(--border);background:#fff;box-shadow:var(--shadow-sm)}
+    .card img{width:100%;height:100%;object-fit:cover}
+
+    /* BAR */
+    .bar{display:grid;gap:12px;grid-template-columns:1fr auto;align-items:center;border-top:1px solid var(--border);padding-top:16px;margin-top:12px}
+    .btn-secondary{border:1px solid #111;border-radius:999px;padding:10px 16px;text-decoration:none;color:#111;font-weight:700}
+
+    /* CONTACT */
+    .contact{display:grid;gap:20px;grid-template-columns:1.2fr 1fr;align-items:start}
+    .panel{border:1px solid var(--border);border-radius:14px;padding:18px;background:#fff;box-shadow:var(--shadow-sm)}
+
+    /* COLLAPSIBLE FAQ */
+    details{border:1px solid var(--border);border-radius:12px;padding:14px 16px;background:#fff;margin:10px 0}
+    details>summary{font-weight:700;cursor:pointer;list-style:none}
+    details>summary::-webkit-details-marker{display:none}
+
+    /* TESTIMONIALS */
+    .carousel{position:relative;overflow:hidden;border-radius:14px;border:1px solid var(--border);background:#fff}
+    .slides{display:flex;transition:transform .5s ease}
+    .slide{min-width:100%;padding:20px}
+    .dots{display:flex;gap:8px;justify-content:center;padding:10px}
+    .dots button{width:10px;height:10px;border-radius:999px;border:1px solid #222;background:#fff;cursor:pointer}
+    .dots button.active{background:#222}
+
+    /* REVEAL ANIMATIONS */
+    .reveal{opacity:0;transform:translateY(14px);transition:all .6s ease}
+    .reveal.in{opacity:1;transform:none}
+
+    /* FOOTER */
+    footer{padding:28px 0 56px;border-top:1px solid var(--border);background:#f8f8f8;color:var(--muted)}
+
+    /* RESOURCES — CONSISTENT CARDS/LISTS */
+    .resources-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:18px}
+    .resource-card{background:#fff;border:1px solid var(--border);border-radius:14px;box-shadow:var(--shadow-sm);overflow:hidden}
+    .resource-card header{padding:14px 16px;border-bottom:1px solid var(--border)}
+    .resource-card header h3{margin:0}
+    .resource-list{list-style:none;margin:0;padding:0}
+    .resource-list li{display:grid;grid-template-columns:1fr auto;gap:6px 12px;padding:12px 16px;border-top:1px solid var(--border)}
+    .resource-list li:first-child{border-top:none}
+    .resource-name{font-weight:600}
+    .resource-meta{grid-column:1/-1;color:var(--muted);font-size:14px}
+    .resource-link a{white-space:nowrap}
+
+    @media (max-width:980px){
+      .grid-2,.grid-3,.contact{grid-template-columns:1fr}
+      .bullets{columns:1}
+      .hero-inner{padding:78px 0 46px}
+      .values{grid-template-columns:1fr}
+      .nav-inner{height:60px}
+    }
+  </style>
+</head>
+<body>
+  <!-- NAV -->
+  <nav class="nav" aria-label="Primary">
+    <div class="container nav-inner">
+      <div class="brand">
+        <img src="images/dublin_cleaners_logo.png" alt="Dublin Cleaners logo" />
+        <span class="wordmark">Dublin Cleaners — Couture Care</span>
+      </div>
+      <div class="actions">
+        <a class="btn" href="tel:+16147649934" aria-label="Call to schedule">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79a15.464 15.464 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.72 11.72 0 003.68.59 1 1 0 011 1V20a1 1 0 01-1 1C9.61 21 3 14.39 3 6a1 1 0 011-1h3.47a1 1 0 011 1 11.72 11.72 0 00.59 3.68 1 1 0 01-.24 1.02l-2.2 2.09z"/></svg>
+          Schedule Now
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="container hero-inner">
+      <span class="eyebrow">Wedding & Couture Garment Specialists</span>
+      <h1>From First Fitting<br>to Forever Keepsake</h1>
+
+      <!-- Centered tagline above the schedule button (as requested) -->
+      <p class="hero-tagline">Hand-Finished cleaning, pressing, and museum grade preservations for gowns, veils, and formalwear. Concierge-level service from Central Ohio's Couture experts!</p>
+
+      <p class="hero-sub">Your gown deserves couture-level care from Central Ohio’s most trusted experts—family-owned since 1934 and the region’s only Museum Style provider.</p>
+
+      <div class="cta-row">
+        <a class="btn" href="tel:+16147649934">Schedule a Wedding Consultation</a>
+        <a class="btn alt" href="#why-dublin">Why Brides Choose Us</a>
+      </div>
+
+      <!-- Value pills just below hero for quick trust-building -->
+      <div class="values container" style="margin-top:26px">
+        <div class="pill"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg> 90+ Years • Family-Owned</div>
+        <div class="pill"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg> Only Museum Style in Central Ohio</div>
+        <div class="pill"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 1l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 8h7z"/></svg> Association of Wedding Gown Specialists®</div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+
+      <!-- WHY DUBLIN -->
+      <section id="why-dublin" class="reveal">
+        <h2>Why Dublin Cleaners</h2>
+        <ul class="bullets">
+          <li>90+ years of luxury garment care (family-owned since 1934)</li>
+          <li>Only Museum Style provider in Central Ohio</li>
+          <li>Association of Wedding Gown Specialists member (guarantee honored in 500+ cities worldwide)</li>
+          <li>Preferred by leading bridal boutiques; delicate textiles handled in‑house</li>
+        </ul>
+        <p class="fine">We believe you came to us to make an investment in your image—our image is a reflection of you.</p>
+      </section>
+
+      <!-- PRE-WEDDING (concise modern) -->
+      <section id="pre-wedding" class="reveal">
+        <h2>Pre‑Wedding Services</h2>
+        <p>Relax—we’ll handle the details. Our bridal team coordinates spot cleaning, pressing, and assistance for the mother of the bride/groom and bridesmaids. With your pre‑wedding pressing, you receive a complimentary <strong>Wedding Day Emergency Kit</strong>.</p>
+
+        <h3 class="subtitle">Wedding Dress Cleaning</h3>
+        <p>If you purchased a sample gown, we can clean it prior to your first alteration appointment. Spot cleaning is also available.</p>
+
+        <h3 class="subtitle">Wedding Dress Pressing</h3>
+        <p>Final pressing for your dress and veil so they’re flawless for the big day.</p>
+
+        <h3 class="subtitle">How It Works</h3>
+        <p>We carefully press/steam for safe travel. Your bodice is placed on hangers with a bust form; the gown is protected in an extra‑long white poly bag. Our staff assists loading the gown into your vehicle.</p>
+
+        <h3 class="subtitle">Wedding Day Emergency Kit</h3>
+        <p><strong>Includes:</strong> $50 Gift Certificate for Bridal Gown Cleaning & Preservation, cotton balls, Q‑tips, lint roller, mouthwash, hand lotion, tissues, sewing kit, bobby pins, safety pins, band‑aids, emery board, extra earring backs, and (if needed) a crochet hook for elastic loops over buttons.</p>
+        <p>Brides call it a lifesaver—perfect for averting last‑minute hiccups.</p>
+      </section>
+
+      <!-- PRESERVE ORIGINAL COPY UNCHANGED (retained but with requested title tweak) -->
+      <section id="pre-wedding-original-copy" class="band reveal" aria-label="Original Pre‑Wedding Copy (verbatim)">
+        <h3>Pre‑Wedding Services</h3>
+        <p>We all know there’s a lot to coordinate when it comes to planning a wedding. The pre-wedding services of Dublin Cleaners exist with one goal in mind: Allowing you to relax while we handle the details. Our highly experienced bridal staff works with you to arrange spot cleaning if necessary, pressing and assistance to the mother of the bride and bridesmaids. With your wedding dress pressing, you will receive a complimentary Wedding Day Emergency Kit that can be an absolute lifesaver in a pinch!</p>
+        <h4>WEDDING DRESS CLEANING</h4>
+        <p>If you have purchased a sample gown, Dublin Cleaners can clean your wedding gown prior to your first alteration appointment.  Dublin Cleaners offers spot cleaning also.</p>
+        <h4>WEDDING DRESS PRESSING</h4>
+        <p>We will give your wedding dress and veil one final pressing to freshen it up and make it look flawless for the big day.</p>
+        <h4>How it works:</h4>
+        <p>We carefully press or steam so it can travel safely.  When your gown is professionally pressed, the bodice of your wedding dress will be placed on hangers with a bust form and your gown will be as long as it is from the top of your gown to the tip of the train.  Then it will be protected by am extra long white poly bag.  Our staff will assist you by putting the gown into your vehicle.</p>
+        <h4>WEDDING DAY EMERGENCY KIT</h4>
+        <p>The Dublin Cleaners Wedding Day Emergency Kit is absolutely vital to have on hand. We give you the tools you need to handle most any situation with extra needle and thread, safety pins, and other items. Hopefully there won’t be any hiccups with your dress, but if there are, it sure is great to have our kit by your side.</p>
+        <p><strong>The kit includes:</strong> $50 Gift Certificate for Bridal Gown Cleaning and Preservation, cotton balls, Q-tips, lint roller, mouthwash, hand lotion, tissues, sewing kit, bobbie pins, safety pins, band-aids, Emory board, extra earring backs and if needed, a crochet hook to use for elastic loops over buttons. We’ve heard brides describe this kit as a lifesaver and credit it for catastrophe aversion before they went down the aisle.</p>
+        <h4>MOTHER OF THE BRIDE OR GROOM AND BRIDESMAIDS</h4>
+        <p>Let’s not forget these important folks! Dublin Cleaners provides last minute pressing services for all the members of your wedding party. We want to make sure everyone is up there looking fantastic.</p>
+        <h4>PRE-WEDDING FAQS</h4>
+        <p><strong>Where/how should I be storing my dress leading up to the wedding?</strong> If you are having your gown cleaned months before your first alterations appointment, please keep the gown in the cloth bag you received from your bridal boutique, zipped in a closet in a temperature-controlled room.  Do not store in a basement, attic or hot room.  You should be sure the gown bag is not exposed to natural light.  You should also be sure your gown bag is not accessible to house pets or small children.</p>
+        <p>When you get home hang it as high as possible with nothing in contact at the top. Sweep the back and train out just as if it were going down the aisle. Also before the wedding hang your dress so it’s not exposed to direct sunlight and also where the dress will not be accessible to small children or house pets.</p>
+        <p><strong>How to transport your gown from Dublin Cleaners after pre-wedding pressing?</strong> Our staff will assist you in putting the gown into your vehicle.  We recommend having the gown picked up in a vehicle where the back seats can lay flat.  The gown bag will stay secured in place by placing the hanger hook on the outside head-rest post on the passenger side of your vehicle.  Plan to have someone at the destination where you are taking it to meet you and assist you in taking it into the home or venue.  Do not do errands once you pick up your gown.  Go directly to where you are storing it, especially in hot months. Leaving it in the vehicle might cause it to wrinkle in some areas.</p>
+        <p><strong>Suggestions for avoiding stains and damage:</strong> Especially in warm weather months, avoid the bottom of your gown and train to be exposed to parking lots.  Walking on sidewalks can also cause abrasions on the bottom of your gown.  Also, do not allow your gown to be near black mulch beds as the dye in the mulch can transfer to the bottom of your gown.</p>
+        <p>Three generations of the Butler family have been in the dry cleaning business since 1934. Since 1982 only four people have been entrusted with the care of your gown at Dublin Cleaners. We have the best wedding dress cleaner, pressers and preservationists, just ask any local bridal boutique.</p>
+        <p>Additionally, we are the only Museum Style provider in the Central Ohio area. Dublin Cleaners is a member of the Association of Wedding Gown Specialists. This means that we give you a guarantee of satisfaction honored by wedding dress and formal wear specialists in more than 500 major cities around the world. There is simply no other garment care specialist of our caliber for your most treasured dress in all of Central Ohio. View our work in restoration and preservation. (<a href="#restoration">restoration</a>)</p>
+      </section>
+
+      <!-- POST-WEDDING -->
+      <section id="post-wedding" class="reveal">
+        <h2>Post‑Wedding Services</h2>
+        <h3 class="subtitle">Wedding Dress Cleaning & Preservation</h3>
+        <p>Bring your gown to us as soon as possible to minimize stains setting in. As a Certified Wedding Gown Specialist™, we inspect, clean, and preserve with our MuseumCare™ process—professionally, safely, and to the highest standards.</p>
+        <p>We also clean and preserve veils, gloves, and shawls. (We avoid structured handbags and shoes in the chest due to adhesives.)</p>
+      </section>
+
+      <!-- POST-WEDDING FAQS (modern details) -->
+      <section id="post-wedding-faqs" class="reveal">
+        <h2>Post‑Wedding FAQs</h2>
+        <details>
+          <summary>Do I need an appointment?</summary>
+          <p>No. Visit our main location (6845 Caine Road, Columbus, OH 43235). In Licking County, you may use either Granville Cleaners location. The initial inspection/paperwork takes ~20 minutes.</p>
+        </details>
+        <details>
+          <summary>What about tough stains?</summary>
+          <p>Bring your gown ASAP for a free consultation. We’ll assess realistic outcomes. “Invisible stains” (champagne, icing, clear beverages, perspiration) can oxidize and yellow—clean your gown even if it appears clean.</p>
+        </details>
+        <details>
+          <summary>Can I open the preservation box?</summary>
+          <p>You can view your gown through the chest window. We do not seal the chest and provide white cotton gloves to gently recenter the bodice if it shifts. Removing the gown requires re‑cleaning before returning to the chest.</p>
+        </details>
+        <details>
+          <summary>What are your guarantees?</summary>
+          <p>We advise how/where to store your acid‑free chest (temperature‑controlled, never plastic, not in basement/attic/hot rooms/garage/crawl space/storage). As Central Ohio’s only Association of Wedding Gown Specialists member, your guarantee is honored worldwide.</p>
+        </details>
+        <details>
+          <summary>How long does preservation take?</summary>
+          <p>We handle 1,000+ gowns/year. Turnaround is typically 6–10 weeks (Dec–Apr is fastest; May–Nov is busiest). Have a special date? Ask—we often can accommodate with a month’s notice.</p>
+        </details>
+      </section>
+
+      <!-- RESTORATION -->
+      <section id="restoration" class="reveal">
+        <h2>Cleaning Services — Restoration</h2>
+        <p>There are many steps to restoring clothing and wedding dresses. As a member of the Association of Wedding Gown Specialists and with decades of experience, we know what it takes to restore garments to their original glamour.</p>
+        <p><strong>Highlights:</strong> Close inspection and fabric testing → cover delicates → pre‑spot → delicate cleaning → expert pressing and finishing.</p>
+        <p><a class="btn-secondary" href="#our-work">View some of our work</a></p>
+      </section>
+
+      <!-- DIFFERENT -->
+      <section id="why-different" class="reveal">
+        <h2>Why We’re Different</h2>
+        <p>With one central plant, five stores, and 2,500+ home‑delivery clients, we can classify garments so specialists focus on specific fabrics, garments, and even shades. Example: a trousers finisher dedicated to dark shades; two specialists who handle only blouses and suit coats. Our 60+ experts gain more experience in a week than many technicians in a year.</p>
+        <p>We’ve invested in equipment that supports environmentally responsible cleaning without compromising quality.</p>
+      </section>
+
+      <!-- TIPS GRID -->
+      <section id="tips" class="reveal">
+        <h2>Tips for the Bride</h2>
+        <div class="grid-3">
+          <div class="box"><h4>Wedding Gown Fittings</h4><p>Bring your wedding shoes to every fitting; wear the same undergarments for consistency.</p></div>
+          <div class="box"><h4>Hanging Your Gown</h4><p>Use inside loops attached to sturdy seams; never hang by shoulders/straps. Keep the hem off the floor.</p></div>
+          <div class="box"><h4>Inspection</h4><p>Check for loose threads, beads, buttons, seams, and crushed areas a few days before the wedding. Need a refreshing press? Call us.</p></div>
+          <div class="box"><h4>Garment Bag</h4><p>On the day, remove the gown from the bag and fluff layers. Don’t iron/steam yourself to avoid water stains. Our pressed gowns come in a protective, billowy white bag—ready to step into.</p></div>
+          <div class="box"><h4>Hair & Makeup</h4><p>Cover your front with a sheet; wear a button‑down/robe while you finish hair and makeup.</p></div>
+          <div class="box"><h4>Caring for Your Gown</h4><p>Stand when possible; if you sit, use a backless stool/chair to keep fullness and avoid wrinkles.</p></div>
+          <div class="box"><h4>Getting to the Reception</h4><p>Lay the train across the seat next to you; sit forward to avoid wrinkling. Watch doors, puddles, mud, and newly sealed blacktop.</p></div>
+          <div class="box"><h4>Photos</h4><p>Use a white pillowcase/towel underfoot outside. Avoid black mulch and fresh driveway sealer—two of the hardest stains to remove.</p></div>
+          <div class="box"><h4>No Sparklers</h4><p>We’ve seen irreparable sparkler damage—consider other send‑off options.</p></div>
+          <div class="box"><h4>Storage Afterward</h4><p>Avoid plastic (emits fumes and traps moisture). Contact us for cleaning & preservation.</p></div>
+          <div class="box"><h4>Cleaning Matters</h4><p>“Invisible stains” (champagne, icing, perspiration, clear beverages) oxidize and yellow—clean even if it looks spotless.</p></div>
+        </div>
+      </section>
+
+      <!-- EXPERTS (updated Janice experience) -->
+      <section id="experts" class="reveal">
+        <h2>Wedding Dress Experts</h2>
+        <p><strong>Greg Butler</strong> — Second generation in Central Ohio dry cleaning; four decades of gown cleaning and vintage restoration; member of three national/international associations; trains the third generation (Brian).</p>
+        <p><strong>Margaret Butler</strong> — 43 years preserving bridal gowns; active in the Association of Wedding Gown Specialists; boutique/alterations liaison.</p>
+        <p><strong>Anne</strong> — 37+ years; final inspector and preservationist; repairs, checks beads/embellishments, replacement as needed.</p>
+        <p><strong>Karen</strong> (38 years) & <strong>Janice</strong> (25+ years) — Finishers/pressers skilled in intricate styles and fabrics.</p>
+        <p class="fine"><strong>Trusted Since 1934</strong> — Only five people have been entrusted with your wedding dress at Dublin Cleaners since 1982.</p>
+      </section>
+
+      <!-- REVIEWS (carousel) -->
+      <section id="reviews" class="reveal" aria-label="Customer Reviews">
+        <h2>Reviews</h2>
+        <div class="carousel" role="region" aria-roledescription="carousel">
+          <div class="slides" id="slides">
+            <div class="slide"><em>07/26/2025</em> — “My daughter’s gown went from a crisis to perfect in a week thanks to Margaret and team. Emergency cleaning, coordination with alterations—above and beyond. Customer for life!”</div>
+            <div class="slide"><em>05/19/2025</em> — “Red wine, makeup, dirt on the train—now PRISTINE and PERFECT. Greg and Margaret worked wonders. I’ll be back for all dry cleaning.”</div>
+            <div class="slide"><em>11/14/2024</em> — “Outstanding job on my gown. I felt special even after the wedding. Genuine care and excellent results.”</div>
+            <div class="slide"><em>10/15/2024</em> — “Pressed my dress and my husband’s suit to perfection and wrapped for travel. Can’t wait to have them preserve it. Highly recommend!”</div>
+          </div>
+          <div class="dots" aria-label="Carousel Pagination">
+            <button aria-label="Slide 1" data-i="0" class="active"></button>
+            <button aria-label="Slide 2" data-i="1"></button>
+            <button aria-label="Slide 3" data-i="2"></button>
+            <button aria-label="Slide 4" data-i="3"></button>
+          </div>
+          <div class="bar">
+            <p class="fine">Want to leave a review?</p>
+            <div>
+              <a class="btn-secondary" href="https://www.weddingwire.com/biz/dublin-cleaners-gown-care-columbus/5184acd6c3dd4b61.html" target="_blank" rel="noopener">WeddingWire</a>
+              <a class="btn-secondary" href="https://www.theknot.com/marketplace/dublin-cleaners-inc-5-locations-in-columbus-oh-663427" target="_blank" rel="noopener">The Knot</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- RESOURCES (reworked for visual consistency) -->
+      <section id="bridal-resources" class="reveal">
+        <h2>Bridal Resources</h2>
+        <div class="resources-grid">
+          <!-- Boutiques -->
+          <article class="resource-card">
+            <header><h3 class="subtitle">Bridal Boutiques</h3></header>
+            <ul class="resource-list" aria-label="Bridal Boutiques List">
+              <li>
+                <span class="resource-name">La Jeune Mariee Bridal</span>
+                <span class="resource-link"><a href="https://lajeunemariee.com" target="_blank" rel="noopener">Website</a></span>
+                <span class="resource-meta">614‑228‑2700</span>
+              </li>
+              <li>
+                <span class="resource-name">Luxe Redux Bridal Boutique</span>
+                <span class="resource-link"><a href="https://luxereduxbridal.com" target="_blank" rel="noopener">Website</a></span>
+                <span class="resource-meta">139 E. Main St Suite A</span>
+              </li>
+              <li>
+                <span class="resource-name">Ohio Bridal Outlet</span>
+                <span class="resource-link"><a href="mailto:hello@ohiobridal.com">Email</a></span>
+                <span class="resource-meta">740‑833‑0189</span>
+              </li>
+              <li>
+                <span class="resource-name">White of Dublin</span>
+                <span class="resource-link"><a href="https://whitebridalboutiques.com" target="_blank" rel="noopener">Website</a></span>
+                <span class="resource-meta">614‑791‑2600</span>
+              </li>
+              <li>
+                <span class="resource-name">Emerald & Oak Bridal Boutique</span>
+                <span class="resource-link"><a href="https://emeraldandoakbridal.com" target="_blank" rel="noopener">Website</a></span>
+                <span class="resource-meta">614‑726‑9445</span>
+              </li>
+              <li>
+                <span class="resource-name">Dublin Bridal</span>
+                <span class="resource-link"><a href="https://dublinbridal.com" target="_blank" rel="noopener">Website</a></span>
+                <span class="resource-meta">614‑553‑7146</span>
+              </li>
+              <li>
+                <span class="resource-name">Wendy’s Bridal</span>
+                <span class="resource-link"><a href="https://wendysbridalcolumbus.com" target="_blank" rel="noopener">Website</a></span>
+                <span class="resource-meta">614‑336‑9100</span>
+              </li>
+              <li>
+                <span class="resource-name">Henri’s Cloud Nine</span>
+                <span class="resource-link"><a href="https://henris.com" target="_blank" rel="noopener">Website</a></span>
+                <span class="resource-meta">800‑952‑3560</span>
+              </li>
+              <li>
+                <span class="resource-name">Vow’d</span>
+                <span class="resource-link"><a href="https://vowdweddings.com/store?name=Columbus" target="_blank" rel="noopener">Website</a></span>
+                <span class="resource-meta">614‑858‑5009</span>
+              </li>
+              <li>
+                <span class="resource-name">Luxe Redux</span>
+                <span class="resource-link"><a href="https://luxeredux.com" target="_blank" rel="noopener">Website</a></span>
+                <span class="resource-meta">614‑787‑2930</span>
+              </li>
+              <li>
+                <span class="resource-name">B. Loved Bridal</span>
+                <span class="resource-link"><a href="https://blovedbridal.com" target="_blank" rel="noopener">Website</a></span>
+                <span class="resource-meta">614‑935‑4437</span>
+              </li>
+              <li>
+                <span class="resource-name">Brick & Ivy Bridal</span>
+                <span class="resource-link"><a href="https://brickandivorybridal.com" target="_blank" rel="noopener">Website</a></span>
+                <span class="resource-meta">614‑259‑7595</span>
+              </li>
+            </ul>
+          </article>
+
+          <!-- Alterations -->
+          <article class="resource-card">
+            <header><h3 class="subtitle">Wedding Gown Alterations</h3></header>
+            <ul class="resource-list" aria-label="Alterations List">
+              <li>
+                <span class="resource-name">Fitted Alteration Specialist</span>
+                <span class="resource-link"><a href="https://fittedalteration.square.site/" target="_blank" rel="noopener">Website</a></span>
+                <span class="resource-meta">734-363-9094</span>
+              </li>
+              <li>
+                <span class="resource-name">Carolyn Fang</span>
+                <span class="resource-link"><a href="mailto:carolynohio@hotmail.com">Email</a></span>
+                <span class="resource-meta">614‑214‑7598</span>
+              </li>
+              <li>
+                <span class="resource-name">Original Alterations – Shamsi</span>
+                <span class="resource-link"><a href="mailto:imanishamsi@yahoo.com">Email</a></span>
+                <span class="resource-meta">614‑203‑6784</span>
+              </li>
+              <li>
+                <span class="resource-name">Columbus Alteration Company</span>
+                <span class="resource-link"><a href="https://columbusalterationco.com" target="_blank" rel="noopener">Website</a></span>
+                <span class="resource-meta">614‑641‑0377</span>
+              </li>
+              <li>
+                <span class="resource-name">Paula Morgenstern</span>
+                <span class="resource-link"><a href="https://www.paulamorgenstern.com" target="_blank" rel="noopener">Website</a></span>
+                <span class="resource-meta">419‑564‑9631</span>
+              </li>
+              <li>
+                <span class="resource-name">Debby Berry</span>
+                <span class="resource-link"><a href="mailto:dberry366@gmail.com">Email</a></span>
+                <span class="resource-meta">614‑653‑1654</span>
+              </li>
+              <li>
+                <span class="resource-name">Sands Bridal & Custom Alterations – Shellie</span>
+                <span class="resource-link"><a href="https://sandsbridalcustomandalterations.com" target="_blank" rel="noopener">Website</a></span>
+                <span class="resource-meta">614‑209‑1789</span>
+              </li>
+              <li>
+                <span class="resource-name">Altered by Amy</span>
+                <span class="resource-link"><a href="mailto:alteredbyamy@gmail.com">Email</a></span>
+                <span class="resource-meta">740‑644‑1368</span>
+              </li>
+              <li>
+                <span class="resource-name">Kathryn Geraci — Heirloom Studio</span>
+                <span class="resource-link"><a href="https://www.heirloomstudio.design" target="_blank" rel="noopener">Website</a></span>
+                <span class="resource-meta">614‑706‑5052</span>
+              </li>
+              <li>
+                <span class="resource-name">Kelsey Taylor</span>
+                <span class="resource-link"><a href="mailto:ktaylorfashion@gmail.com">Email</a></span>
+                <span class="resource-meta">614‑738‑8342</span>
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- OUR WORK -->
+      <section id="our-work" class="reveal">
+        <h2>Our Work</h2>
+        <p class="fine">Replace placeholders with your images; naming maps 1:1 to sections.</p>
+        <ul class="fine">
+          <li><code>pre_wedding_01.jpg</code>, <code>pre_wedding_02.jpg</code> …</li>
+          <li><code>post_wedding_01.jpg</code>, <code>post_wedding_02.jpg</code> …</li>
+          <li><code>restoration_before_01.jpg</code> / <code>restoration_after_01.jpg</code> pairs</li>
+          <li><code>why_different_01.jpg</code>, <code>tips_01.jpg</code>, <code>experts_01.jpg</code> …</li>
+        </ul>
+        <div class="gallery">
+          <figure class="card"><img src="images/pre_wedding_01.jpg" alt="Pre-wedding pressing and preparation"></figure>
+          <figure class="card"><img src="images/pre_wedding_02.jpg" alt="Veil finishing and detail checks"></figure>
+          <figure class="card"><img src="images/post_wedding_01.jpg" alt="Post-wedding cleaning inspection"></figure>
+          <figure class="card"><img src="images/post_wedding_02.jpg" alt="MuseumCare preservation process"></figure>
+          <figure class="card"><img src="images/restoration_before_01.jpg" alt="Restoration — before"></figure>
+          <figure class="card"><img src="images/restoration_after_01.jpg" alt="Restoration — after"></figure>
+          <figure class="card"><img src="images/experts_01.jpg" alt="Couture team experts at work"></figure>
+          <figure class="card"><img src="images/why_different_01.jpg" alt="Classified garment workflows"></figure>
+        </div>
+        <div class="bar">
+          <p class="fine">Looking for boutique partnerships, shipping options, or on‑site consultation?</p>
+          <a class="btn-secondary" href="mailto:mbutler@dublincleaners.com">Email Our Couture Team</a>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="reveal">
+        <h2>Contact Our Bridal Experts</h2>
+        <div class="contact">
+          <div class="panel">
+            <p>Ready for us to go to work for you? Tell us which services you need and we’ll be in touch.</p>
+            <p><strong>Call:</strong> <a href="tel:+16143359206">Margaret Butler, Bridal Specialist — (614) 335‑9206</a></p>
+            <p><strong>Email:</strong> <a href="mailto:mbutler@dublincleaners.com">mbutler@dublincleaners.com</a></p>
+            <p class="fine">Main: <a href="tel:+16147649934">(614) 764‑9934</a> • 6845 Caine Rd, Columbus, OH</p>
+          </div>
+          <div class="panel">
+            <p class="fine"><strong>Write a Review</strong></p>
+            <p><a href="https://www.weddingwire.com/biz/dublin-cleaners-gown-care-columbus/5184acd6c3dd4b61.html" target="_blank" rel="noopener">WeddingWire</a> &nbsp;|&nbsp; <a href="https://www.theknot.com/marketplace/dublin-cleaners-inc-5-locations-in-columbus-oh-663427" target="_blank" rel="noopener">The Knot</a></p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© Dublin Cleaners. All rights reserved.</p>
+      <p class="fine">Follow us on Facebook @dublincleaners • Instagram @dublincleaners • TikTok @dublincleaners.com • X @dublincleaners.com</p>
+    </div>
+  </footer>
+
+  <script>
+    // IntersectionObserver reveal
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    },{threshold:.12});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+    // Simple carousel
+    const slidesEl = document.getElementById('slides');
+    const dots = Array.from(document.querySelectorAll('.dots button'));
+    let idx = 0;
+    function go(i){ idx = i; slidesEl.style.transform = `translateX(${-100*i}%)`; dots.forEach((d,di)=>d.classList.toggle('active',di===i)); }
+    dots.forEach(btn=>btn.addEventListener('click',()=>go(+btn.dataset.i)));
+    setInterval(()=>{ go((idx+1)%dots.length); }, 5200);
+  </script>
+</body>
+</html>
