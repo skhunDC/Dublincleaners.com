@@ -3,6 +3,7 @@ Revamp of www.Dublincleaners.com site
 
 1st of many updates:  
 Wedding Page Prototype: <a href="https://skhundc.github.io/Dublincleaners.com/Wedding.html">Click here</a>
+Short North Page Prototype: Wedding Page Prototype: <a href="https://skhundc.github.io/Dublincleaners.com/Wedding.html">Click here</a>
 
 ## Mobile Friendliness
 
