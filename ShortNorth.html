@@ -27,7 +27,7 @@
     .brand .wordmark{font-weight:700;letter-spacing:.2px}
     .nav a.btn{display:inline-flex;align-items:center;gap:10px;padding:10px 16px;border-radius:999px;background:var(--accent);color:var(--accent-ink);font-weight:700;box-shadow:var(--shadow-sm)}
     .nav a.btn svg{width:18px;height:18px}
-    header.hero{position:relative;display:grid;min-height:57vh;align-items:end;color:#fff;background:#111 url('https://www.dublincleaners.com/wp-content/uploads/2025/08/Wedding_Venue.png') center/cover no-repeat}
+    header.hero{position:relative;display:grid;min-height:57vh;align-items:end;color:#fff;background:#111 url('https://www.dublincleaners.com/wp-content/uploads/2025/08/ShortNorthBannerBW.jpg') center top/cover no-repeat}
     header.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.25),rgba(0,0,0,.6));z-index:0}
     .hero-inner{position:relative;z-index:1;padding:66px 24px 48px}
     .eyebrow{display:inline-block;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(6px);font-weight:600;letter-spacing:.3px}
@@ -97,7 +97,7 @@
       let ticking = false;
       function update(){
         const offset = window.scrollY * factor;
-        hero.style.backgroundPosition = `center calc(50% + ${offset}px)`;
+        hero.style.backgroundPosition = `center ${offset}px`;
         ticking = false;
       }
       window.addEventListener('scroll', () => {
