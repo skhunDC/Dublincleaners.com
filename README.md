@@ -19,3 +19,9 @@ https://vimeo.com/showcase/5029054 Password: Check Notes
 
 UKG:
 https://secure.entertimeonline.com/ta/DubCleaners.home?rnd=ZNX&showAdmin=1&Ext=login&sft=BEOQVDBHET&ActiveSessionId=24253240747#home
+
+StainBlaster:
+https://script.google.com/macros/s/AKfycbxd1hLTerGS9S7LoG-Bh5uV7AFxwNGaIem3tDM6sTcBk36wFWHxfjkm7L7hc_Sd5lLO/exec
+
+Request Manager: 
+https://script.google.com/a/macros/dublincleaners.com/s/AKfycbxf6fr9FKGjQCPE31Li-woofA6k8H7SqNcO09HayFdKfJBeSiQJXIfOd_bJ4MVfynoJag/exec
