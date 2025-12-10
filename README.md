@@ -25,3 +25,6 @@ https://script.google.com/macros/s/AKfycbxd1hLTerGS9S7LoG-Bh5uV7AFxwNGaIem3tDM6s
 
 Request Manager: 
 https://script.google.com/a/macros/dublincleaners.com/s/AKfycbxf6fr9FKGjQCPE31Li-woofA6k8H7SqNcO09HayFdKfJBeSiQJXIfOd_bJ4MVfynoJag/exec
+
+Route Dashboard:
+https://script.google.com/a/macros/dublincleaners.com/s/AKfycbwKfd83Aue6Q09fUzejyxbJyZN90u19oByyNHq4W7m81ipLUd46VWy0FjI9UkSvJr2W-g/exec
